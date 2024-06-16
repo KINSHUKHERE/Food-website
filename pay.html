@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fake Payment Template</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    .payment-options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .payment-option {
+        text-align: center;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .payment-option img {
+        width: 100px;
+        height: auto;
+    }
+    .payment-option:hover {
+        border-color: #007bff;
+    }
+    #upi-id {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    #pay-now-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #pay-now-btn:hover {
+        background-color: #0056b3;
+    }
+    #googlepay img{
+        padding-top: 40px;
+    }
+    #googlepay p{
+        padding-top: 15px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Choose Payment Method</h2>
+    <div class="payment-options">
+        <div class="payment-option" id="phonepe">
+            <img src="phonepe-logo-icon.png" alt="PhonePe">
+            <p>Pay with PhonePe</p>
+        </div>
+
+        <div class="payment-option" id="phonepe">
+            <img src="bhim.png" alt="BhimUPI">
+            <p>Pay with BhimUPI</p>
+        </div>
+
+        <div class="payment-option" id="googlepay">
+            <img src="googlepay_logo.png" alt="Google Pay">
+            <p>Pay with Google Pay</p>
+        </div>
+    </div>
+    <input type="text" id="upi-id" placeholder="Enter UPI ID">
+    <button id="pay-now-btn">Pay Now</button>
+</div>
+
+<script>
+    document.getElementById('pay-now-btn').addEventListener('click', function() {
+        window.location.href = 'success.html';
+    });
+</script>
+
+</body>
+</html>
